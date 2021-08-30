@@ -3,9 +3,15 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
-	fmt.Println("test")
-	fmt.Println(len(os.Args) - 1)
+	args := os.Args
+	if len(args) < 2 {
+		fmt.Println("0")
+	} else {
+		data := strings.Split(os.Args[1], " ")
+		fmt.Println(len(data))
+	}
 }
