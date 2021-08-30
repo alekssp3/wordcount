@@ -7,11 +7,9 @@ import (
 )
 
 func main() {
-	args := os.Args
-	if len(args) < 2 {
-		fmt.Println("0")
-	} else {
-		data := strings.Split(os.Args[1], " ")
-		fmt.Println(len(data))
+	var ans int
+	if len(os.Args) > 1 && os.Args[1] != "" {
+		ans = len(strings.Split(os.Args[1], " "))
 	}
+	fmt.Println(ans)
 }
